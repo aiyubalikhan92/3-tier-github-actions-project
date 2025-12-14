@@ -87,7 +87,6 @@ jobs:
             -Dsonar.projectKey=myorg_client
             -Dsonar.projectName=myorg_client
             -Dsonar.sources=.
-            -Dsonar.branch.name=main
             -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/build/**
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -116,7 +115,6 @@ jobs:
             -Dsonar.projectName=myorg_api
             -Dsonar.sources=.
             -Dsonar.java.binaries=target
-            -Dsonar.branch.name=main
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}              
