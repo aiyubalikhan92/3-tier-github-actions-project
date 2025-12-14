@@ -76,6 +76,7 @@ jobs:
       with:
             projectBaseDir: client   # instead of working-directory
             args: >
+                -Dsonar.organization=myorg1
                 -Dsonar.projectKey=myorg_client
                 -Dsonar.projectName=myorg_client
                 -Dsonar.sources=.
@@ -94,6 +95,7 @@ jobs:
       with:
             projectBaseDir: api   # instead of working-directory
             args: >
+                -Dsonar.organization=myorg
                 -Dsonar.projectKey=myorg_api
                 -Dsonar.projectName=myorg_api
                 -Dsonar.sources=.
