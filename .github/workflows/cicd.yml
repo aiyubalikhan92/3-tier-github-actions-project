@@ -83,7 +83,7 @@ jobs:
                 -Dsonar.branch.name=main
                 -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/build/**
             env:
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            SONAR_TOKEN: ${{ vars.SONAR_TOKEN }}
             SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}    
   sonar_backend:
     runs-on: ubuntu-latest
@@ -102,5 +102,5 @@ jobs:
                 -Dsonar.sources=.
                 -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/build/**
             env:
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            SONAR_TOKEN: ${{ vars.SONAR_TOKEN }}
             SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}                  
