@@ -76,10 +76,11 @@ jobs:
       with:
             projectBaseDir: client   # instead of working-directory
             args: >
-                -Dsonar.organization=myorg1
+                -Dsonar.organization=myorg
                 -Dsonar.projectKey=myorg_client
                 -Dsonar.projectName=myorg_client
                 -Dsonar.sources=.
+                -Dsonar.branch.name=main
                 -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/build/**
             env:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
